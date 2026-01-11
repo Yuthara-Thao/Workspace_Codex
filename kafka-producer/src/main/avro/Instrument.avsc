@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Instrument",
+  "namespace": "com.example.kafkaproducer.avro",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "name", "type": "string"},
+    {"name": "symbol", "type": "string"}
+  ]
+}
