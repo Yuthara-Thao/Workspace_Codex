@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "Trade",
+  "namespace": "com.example.kafkaproducer.avro",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "instrument", "type": "com.example.kafkaproducer.avro.Instrument"},
+    {"name": "quantity", "type": "long"},
+    {"name": "price", "type": "double"},
+    {
+      "name": "side",
+      "type": {
+        "type": "enum",
+        "name": "Side",
+        "symbols": ["BUY", "SELL"]
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
